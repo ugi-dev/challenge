@@ -1,12 +1,9 @@
-import React, { FunctionComponent } from 'react';
+import type React from 'react';
+import type { CardProps } from './Card.types';
 
 import $ from './Card.module.css';
 
-interface CardProps {
-  children: React.ReactNode;
-}
-
-const Card: FunctionComponent<CardProps> = ({ children }) => {
+const Card: React.FC<CardProps> = ({ children }) => {
   return <div className={$.card}>{children}</div>;
 };
 

@@ -1,15 +1,10 @@
-import React, { FunctionComponent } from "react";
+import type React from "react";
+import type { InputTextProps } from "./InputText.types";
 
 import $ from "./InputText.module.css";
 
-interface InputTextProps {
-  name: string;
-  placeholder: string;
-  value: string;
-  onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
-}
 
-const InputText: FunctionComponent<InputTextProps> = ({
+const InputText: React.FC<InputTextProps> = ({
   name,
   onChange,
   placeholder,

@@ -1,15 +1,10 @@
-import React, { FunctionComponent } from 'react';
+import type React from 'react';
 import cx from 'classnames';
+import type { SectionProps } from './Section.types';
 
 import $ from './Section.module.css';
 
-type VariantType = 'light' | 'dark';
-interface SectionProps {
-  variant?: VariantType;
-  children: React.ReactNode;
-}
-
-const Section: FunctionComponent<SectionProps> = ({ children, variant = 'light' }) => {
+const Section: React.FC<SectionProps> = ({ children, variant = 'light' }) => {
   return (
     <section
       className={cx($.section, {

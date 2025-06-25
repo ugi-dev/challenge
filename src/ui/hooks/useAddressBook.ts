@@ -8,7 +8,7 @@ import type { Address } from "@/types";
 import React from "react";
 import { useAppDispatch, useAppSelector } from "../../core/store/hooks";
 
-import transformAddress, { RawAddressModel } from "../../core/models/address";
+import transformAddress, { type RawAddressModel } from "../../core/models/address";
 import databaseService from "../../core/services/databaseService";
 
 export default function useAddressBook() {
